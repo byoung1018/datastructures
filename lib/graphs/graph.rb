@@ -15,6 +15,4 @@ class Graph
     @vertices[start].add_edge(start, finish, weight)
   end
 
-
-
 end

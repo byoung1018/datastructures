@@ -35,7 +35,7 @@ describe Graph do
 
   describe "#add_edge" do
     it "adds edges to each vertex" do
-      vertices = graph.instance_variable_get(:@vertices)
+      vertices = graph.vertices
       expect(vertices["a"].edges["b"].weight).to eq(2)
       expect(vertices["a"].edges["c"].weight).to eq(1)
       expect(vertices["b"].edges["d"].weight).to eq(3)

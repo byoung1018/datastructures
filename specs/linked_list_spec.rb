@@ -44,7 +44,7 @@ describe LinkedList do
 
 
   describe "#add_last" do
-    it "" do
+    it "adds a value to the end of the list" do
       list.add_last("fourth")
       list.add_last("fifth")
       check_integrity(["first", "second", "third", "fourth", "fifth"])
