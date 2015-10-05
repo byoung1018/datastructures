@@ -50,4 +50,18 @@ describe Graph do
       expect(vertices["g"].edges["h"].weight).to eq(2)
     end
   end
+
+  describe "#dijkstra" do
+    it "should find the shortest distance between two vertices" do
+      vertices = graph.vertices
+      expect(graph.dijkstra(vertices["a"], vertices["c"])).to eq(1)
+      expect(graph.dijkstra(vertices["a"], vertices["g"])).to eq(6)
+      expect(graph.dijkstra(vertices["a"], vertices["h"])).to eq(8)
+      expect(graph.dijkstra(vertices["a"], vertices["e"])).to eq(4)
+      expect(graph.dijkstra(vertices["a"], vertices["f"])).to eq(6)
+      expect(graph.dijkstra(vertices["a"], vertices["d"])).to eq(5)
+      expect(graph.dijkstra(vertices["a"], vertices["b"])).to eq(2)
+    end
+  end
+
 end
